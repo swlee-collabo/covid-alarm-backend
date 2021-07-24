@@ -1,4 +1,4 @@
 declare class crawling {
-    getPageScript: () => Promise<import("cheerio").Cheerio<import("cheerio").Element>>;
+    getPageScript: () => Promise<string>;
 }
 export default crawling;

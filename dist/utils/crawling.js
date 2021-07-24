@@ -17,10 +17,8 @@ let crawling = class crawling {
             });
             const data = await response.text();
             const $ = cheerio_1.default.load(data);
-            const coronaStateTable = $('.covid-state-table').filter(f => {
-                console.log(f);
-            });
-            return coronaStateTable;
+            const coronaStateTable = $('.covid-state-table table').html();
+            return `<table>${coronaStateTable}</table>`;
         };
     }
 };

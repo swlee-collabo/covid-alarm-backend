@@ -2,5 +2,5 @@ import { AppService } from './app.service';
 export declare class AppController {
     private readonly appService;
     constructor(appService: AppService);
-    getHello(): Promise<import("cheerio").Cheerio<import("domhandler").Element>>;
+    getHello(): Promise<string>;
 }

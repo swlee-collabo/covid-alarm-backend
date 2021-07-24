@@ -13,13 +13,10 @@ class crawling{
     const data = await response.text();
 
     const $ = cheerio.load(data);
-    const coronaStateTable = $('.covid-state-table').filter(f=>{
-      console.log(f)
-    });
-    // console.log('coronaStateTable: ', coronaStateTable);
-    // const dataTable = coronaStateTable.html();
+    const coronaStateTable = $('.covid-state-table table').html();
+    // const dataTable = coronaStateTable;
     // console.log('dataTable: ', dataTable);
-    return coronaStateTable;
+    return `<table>${coronaStateTable}</table>`;
   } 
 }
 
