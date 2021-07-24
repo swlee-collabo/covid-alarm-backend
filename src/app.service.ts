@@ -6,7 +6,6 @@ const crawling = new Crawling();
 @Injectable()
 export class AppService {
   getHello(){
-    
     return crawling.getPageScript();
   }
 }
